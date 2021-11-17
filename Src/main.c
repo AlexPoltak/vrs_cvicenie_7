@@ -60,6 +60,9 @@ int main(void)
   /* Space for your local variables, callback registration ...*/
 
   	  //type your code here:
+  USART2_RegisterCallback(proccesDmaData);
+  static uint8_t upper = 0;
+  static uint8_t lower = 0;
 
   while (1)
   {
@@ -70,6 +73,8 @@ int main(void)
 	   */
 
   	  	  	  //type your code here:
+	  USART2_CheckDmaReception();
+	  LL_mDelay(1000);
   }
   /* USER CODE END 3 */
 }
@@ -114,6 +119,39 @@ void proccesDmaData(uint8_t sign)
 	/* Process received data */
 
 		// type your algorithm here:
+	static uint8_t count = 0;
+	 static uint8_t upperl = 0;
+	  static uint8_t lowerl = 0;
+		if (sign='#'){
+			count=1;
+			upper=0;
+			lower=0;
+			upperl=0;
+			lowerl=0;
+		}
+		if(count==0){
+			lower=0;
+			upper=0;
+		}
+
+		if(count==1){
+			if(sign!='#'&&sign!='$'){
+				count=count++;
+				if (sign >= 'A' && sign <= 'Z'){
+					upperl=upperl+1;
+				}
+				if (sign >= 'a' && sign <= 'z'){
+					lower1=lowerl+1;
+				}
+			}
+		}
+
+
+		if (sign='$'&&count>0){
+		count=0;
+		lower=lower1;
+		upper=upper1;
+		}
 }
 
 
