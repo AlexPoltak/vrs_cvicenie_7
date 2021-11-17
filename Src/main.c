@@ -40,8 +40,6 @@ void proccesDmaData(uint8_t sign);
 /* Space for your global variables. */
 
 	// type your global variables here:
-static uint8_t upper = 0;
-static uint8_t lower = 0;
 int posDma=0;
 
 void printMessageAboutBufferCapacity(){
@@ -139,14 +137,13 @@ void proccesDmaData(uint8_t sign)
 
 		// type your algorithm here:
 	static uint8_t count = 0;
-	 static uint8_t upperl = 0;
-	  static uint8_t lowerl = 0;
+	 static uint8_t upper = 0;
+	  static uint8_t lower = 0;
 		if (sign=='#'){
 			count=1;
 			upper=0;
 			lower=0;
-			upperl=0;
-			lowerl=0;
+
 		}
 		if(count==0){
 			lower=0;
@@ -157,26 +154,29 @@ void proccesDmaData(uint8_t sign)
 			if(sign!='#'&&sign!='$'){
 				count=count+1;
 				if (sign >= 'A' && sign <= 'Z'){
-					upperl=upperl+1;
+					upper=upper+1;
 				}
 				if (sign >= 'a' && sign <= 'z'){
-					lowerl=lowerl+1;
+					lower=lower+1;
 				}
 			}
 		}
 
 
 		if (sign=='$'&&count>0&&count<=35){
+		size_t size = snprintf(NULL, 0,"number of lower: %d, number of upper: %d \n \n",lower,upper);
+		char* info = (char*)malloc(size);
+		snprintf(info, size,"number of lower: %d, number of upper: %d \n \n",lower,upper);
+		USART2_PutBuffer((uint8_t *)info, size);
 		count=0;
-		lower=lowerl;
-		upper=upperl;
+		lower=0;
+		upper=0;
 		}
+
 		if(count>35){
 			count=0;
 			upper=0;
 			lower=0;
-			upperl=0;
-			lowerl=0;
 		}
 }
 
