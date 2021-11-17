@@ -23,7 +23,8 @@
 #include "dma.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 
@@ -44,10 +45,10 @@ static uint8_t lower = 0;
 int posDma=0;
 
 void printMessageAboutBufferCapacity(){
-	size_t size = snprintf(NULL, 0,"Buffer capacity: %d bytes, occupied memory: %d bytes, load [in %]: %f% \n \n",DMA_USART2_BUFFER_SIZE, posDma, 100*posDma/DMA_USART2_BUFFER_SIZE);
+	size_t size = snprintf(NULL, 0,"Buffer capacity: %d bytes, occupied memory: %d bytes, load in %%: %d \n \n",DMA_USART2_BUFFER_SIZE, posDma, 100*posDma/DMA_USART2_BUFFER_SIZE);
 	char* info = (char*)malloc(size);
-	snprintf(info, size,"Buffer capacity: %d bytes, occupied memory: %d bytes, load [in %]: %f% \n \n",DMA_USART2_BUFFER_SIZE, posDma, 100*posDma/DMA_USART2_BUFFER_SIZE);
-	USART2_PutBuffer(info, size);
+	snprintf(info, size,"Buffer capacity: %d bytes, occupied memory: %d bytes, load in %%: %d \n \n",DMA_USART2_BUFFER_SIZE, posDma, 100*posDma/DMA_USART2_BUFFER_SIZE);
+	USART2_PutBuffer((uint8_t *)info, size);
 	free(info);
 }
 
@@ -90,7 +91,7 @@ int main(void)
 	//  LL_USART_TransmitData8(USART2, lower);
     //  LL_mDelay(5000);
 
-		printInfoToSerial(printMessageAboutBufferCapacity);
+	  printMessageAboutBufferCapacity();
 		LL_mDelay(1000);
 
   }
