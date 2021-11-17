@@ -140,7 +140,7 @@ void proccesDmaData(uint8_t sign)
 			upper=0;
 		}
 
-		if(count==1){
+		if(count>1){
 			if(sign!='#'&&sign!='$'){
 				count=count+1;
 				if (sign >= 'A' && sign <= 'Z'){
@@ -153,10 +153,17 @@ void proccesDmaData(uint8_t sign)
 		}
 
 
-		if (sign=='$'&&count>0){
+		if (sign=='$'&&count>0&&count<=35){
 		count=0;
 		lower=lowerl;
 		upper=upperl;
+		}
+		if(count>35){
+			count=0;
+			upper=0;
+			lower=0;
+			upperl=0;
+			lowerl=0;
 		}
 }
 
