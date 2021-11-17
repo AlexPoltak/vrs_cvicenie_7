@@ -169,7 +169,7 @@ void USART2_CheckDmaReception(void)
 		{
 			if (pos > old_pos)
 			{
-				USART2_ProcessData(&bufferUSART2dma[old_pos], pos - old_pos);
+				USART2_ProcessData(bufferUSART2dma[old_pos]);
 			}
 
 		}
@@ -177,8 +177,8 @@ void USART2_CheckDmaReception(void)
 		old_pos = pos;
 
 		if (pos >= DMA_USART2_BUFFER_SIZE-20)
-
-				USART2_ProcessData(&bufferUSART2dma[0], pos);
+		{
+				USART2_ProcessData(bufferUSART2dma[0]);
 
 			old_pos = 0;
 		}

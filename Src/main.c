@@ -39,7 +39,8 @@ void proccesDmaData(uint8_t sign);
 /* Space for your global variables. */
 
 	// type your global variables here:
-
+static uint8_t upper = 0;
+static uint8_t lower = 0;
 
 int main(void)
 {
@@ -61,8 +62,6 @@ int main(void)
 
   	  //type your code here:
   USART2_RegisterCallback(proccesDmaData);
-  static uint8_t upper = 0;
-  static uint8_t lower = 0;
 
   while (1)
   {
@@ -122,7 +121,7 @@ void proccesDmaData(uint8_t sign)
 	static uint8_t count = 0;
 	 static uint8_t upperl = 0;
 	  static uint8_t lowerl = 0;
-		if (sign='#'){
+		if (sign=='#'){
 			count=1;
 			upper=0;
 			lower=0;
@@ -136,12 +135,12 @@ void proccesDmaData(uint8_t sign)
 
 		if(count==1){
 			if(sign!='#'&&sign!='$'){
-				count=count++;
+				count=count+1;
 				if (sign >= 'A' && sign <= 'Z'){
 					upperl=upperl+1;
 				}
 				if (sign >= 'a' && sign <= 'z'){
-					lower1=lowerl+1;
+					lowerl=lowerl+1;
 				}
 			}
 		}
@@ -149,8 +148,8 @@ void proccesDmaData(uint8_t sign)
 
 		if (sign='$'&&count>0){
 		count=0;
-		lower=lower1;
-		upper=upper1;
+		lower=lowerl;
+		upper=upperl;
 		}
 }
 
