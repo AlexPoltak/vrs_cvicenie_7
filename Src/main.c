@@ -41,7 +41,7 @@ void proccesDmaData(uint8_t sign);
 	// type your global variables here:
 static uint8_t upper = 0;
 static uint8_t lower = 0;
-
+int posDma=0;
 
 
 int main(void)

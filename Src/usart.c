@@ -160,7 +160,7 @@ void USART2_CheckDmaReception(void)
 {
 	//type your implementation here
 	if(USART2_ProcessData == 0) return;
-
+		extern int posDma;
 		static uint16_t old_pos = 0;
 
 		uint16_t pos = DMA_USART2_BUFFER_SIZE - LL_DMA_GetDataLength(DMA1, LL_DMA_CHANNEL_6);
@@ -177,6 +177,7 @@ void USART2_CheckDmaReception(void)
 		}
 
 		old_pos = pos;
+		posDma=pos;
 
 		if (pos >= DMA_USART2_BUFFER_SIZE-20)
 		{
