@@ -42,6 +42,8 @@ void proccesDmaData(uint8_t sign);
 static uint8_t upper = 0;
 static uint8_t lower = 0;
 
+
+
 int main(void)
 {
   /* MCU Configuration--------------------------------------------------------*/
@@ -74,6 +76,11 @@ int main(void)
   	  	  	  //type your code here:
 	  USART2_CheckDmaReception();
 	  LL_mDelay(1000);
+
+	  LL_USART_TransmitData8(USART2, upper);
+	  LL_USART_TransmitData8(USART2, lower);
+      LL_mDelay(5000);
+
   }
   /* USER CODE END 3 */
 }
@@ -146,7 +153,7 @@ void proccesDmaData(uint8_t sign)
 		}
 
 
-		if (sign='$'&&count>0){
+		if (sign=='$'&&count>0){
 		count=0;
 		lower=lowerl;
 		upper=upperl;
