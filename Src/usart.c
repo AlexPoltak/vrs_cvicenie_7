@@ -181,6 +181,9 @@ void USART2_CheckDmaReception(void)
 
 		if (pos >= DMA_USART2_BUFFER_SIZE-20)
 		{
+			LL_DMA_DisableChannel(DMA1, LL_DMA_CHANNEL_6);
+			LL_DMA_SetDataLength(DMA1, LL_DMA_CHANNEL_6, DMA_USART2_BUFFER_SIZE);
+			LL_DMA_EnableChannel(DMA1, LL_DMA_CHANNEL_6);
 			old_pos = 0;
 		}
 }
