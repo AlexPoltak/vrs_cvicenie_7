@@ -10,7 +10,11 @@
 - podľa nastavenia makra "POLLING" na "1" alebo "0" sa bude využívať jeden z uvedených spôsobov prenosu dát (makro sa nastavuje vo vlastnosťiach projektu, project->properties)
 
 <p align="center">
-    <embed src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/files2-compressed.pdf" type="application/pdf">
+    <object data="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/files2-compressed.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/files2-compressed.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/files2-compressed.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 </p>
 
 ### Polling
