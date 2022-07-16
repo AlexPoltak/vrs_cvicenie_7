@@ -10,7 +10,7 @@
 - podľa nastavenia makra "POLLING" na "1" alebo "0" sa bude využívať jeden z uvedených spôsobov prenosu dát (makro sa nastavuje vo vlastnosťiach projektu, project->properties)
 
 <p align="center">
-    <img src="https://github.com/VRS-Predmet/vrs_cvicenie_7/blob/master/images/nastavenie_makra.PNG" width="750">
+    <img src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/files2-compressed.pdf" width="750">
 </p>
 
 ### Polling
