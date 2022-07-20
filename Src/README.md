@@ -8,7 +8,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo-black.svg">
-  <img alt="Logo" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo-black.svg">
+  <img alt="Logo" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg">
 </picture>
   
   <h1 align="left">Libs Charts</h1>
