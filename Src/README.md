@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div align="left">
 <img alt="Logo" height="60px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/image%20(1).svg#gh-light-mode-only">
 <img alt="Logo" height="60px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg#gh-dark-mode-only">
 </div>
