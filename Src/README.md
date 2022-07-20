@@ -2,7 +2,7 @@
 <br />
 <div align="center">
 <img width="400px" height="100px" src="https://github.com/lutzroeder/netron/raw/main/.github/logo-dark.svg#gh-light-mode-only">
-<img width="400px" height="100px" src="https://github.com/lutzroeder/netron/raw/main/.github/logo-light.svg#gh-dark-mode-only">
+<img width="400px" height="100px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg#gh-dark-mode-only">
 </div>
  
   <h1 align="left">Libs Charts</h1>
