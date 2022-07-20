@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="left">
-<img width="400px" height="100px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo-black.svg#gh-light-mode-only">
+<img width="400px" height="100px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/dma_config1.PNG#gh-light-mode-only">
 <img width="400px" height="100px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg#gh-dark-mode-only#gh-dark-mode-only">
 
   
