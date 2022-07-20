@@ -1,15 +1,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="left">
-<!--   <a href="https://github.com/dekdekan/lidaretto-desktop">
-    <img src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo-black.svg#gh-light-mode-only" alt="Logo" height="60">
-    <img src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg#gh-dark-mode-only" alt="Logo" height="60">
-  </a> -->
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/dma_config1.PNG">
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg">
-  <img alt="Logo" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/dma_config1.PNG">
-</picture>
+<img width="400px" height="100px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo-black.svg#gh-light-mode-only">
+<img width="400px" height="100px" src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/logo_white.svg#gh-dark-mode-only#gh-dark-mode-only">
+
   
   <h1 align="left">Libs Charts</h1>
   
