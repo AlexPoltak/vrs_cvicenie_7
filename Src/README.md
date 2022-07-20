@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="left">
-<img src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/image%20(1).svg#gh-light-mode-only">
+<img src="https://github.com/alexpoltak/vrs_cvicenie_7/blob/main/images/image%20(1).svg#gh-dark-mode-only">
 </div>
   <h1 align="left">Libs Charts</h1>
 
