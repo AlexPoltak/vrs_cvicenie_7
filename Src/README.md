@@ -7,6 +7,9 @@
   <h1 align="left">Libs Devices</h1>
   
 - This library is used for generating graphs from trajectory.
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
 
 ### Getting Started
 For generating graphs you need to :
